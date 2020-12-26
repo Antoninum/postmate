@@ -287,6 +287,7 @@ class Postmate {
   }) { // eslint-disable-line no-undef
     this.parent = window
     this.frame = document.createElement('iframe')
+    this.frame.allow = "geolocation"
     this.frame.name = name || ''
     if (classListArray.length > 0) { // check for IE 11. See issue#207
       this.frame.classList.add.apply(this.frame.classList, classListArray)
